@@ -1,5 +1,3 @@
-Got it! Here's a cleaner `README.md` focused specifically on **what the repo is about**, while still being professional and informative:
-
 ---
 
 # AM\&J Website
