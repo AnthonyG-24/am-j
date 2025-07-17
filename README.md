@@ -26,4 +26,3 @@ This site serves as a simple, responsive front-end for AM\&J’s business operat
 
 ---
 
-Would you like to add anything like live link instructions, contribution guidelines, or update sections later when the site is deployed?
