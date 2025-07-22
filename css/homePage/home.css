@@ -1,0 +1,73 @@
+.home-page-container {
+  width: 100%;
+  max-width: 100%;
+  height: 100dvh;
+  height: 100vh;
+  background-color: #627f61;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* makes sure nothing spills out */
+  position: relative;
+}
+
+.amj-name-top-left {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+.amj-left-corner-frame {
+  max-width: 250px;
+}
+
+.gold-overlay {
+  position: absolute;
+  max-width: 100%;
+  max-height: 26rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0.3;
+  margin-top: -4rem;
+}
+
+.amj-logo-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.amj-logo-no-bg {
+  max-width: 100%;
+  width: 550px;
+  height: auto;
+  object-fit: contain;
+}
+
+.subscript-text-under-logo {
+  color: #ffffff;
+  text-align: center;
+  margin-top: -10rem;
+  margin-bottom: 4rem;
+}
+
+.larger-sub-text {
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: -1rem;
+}
+
+.smaller-sub-text {
+  font-family: "Anton", sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 400;
+}
