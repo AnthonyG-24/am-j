@@ -1,0 +1,34 @@
+.about-page-section {
+  background-color: #0132e0;
+  padding: 2rem;
+}
+
+.about-page-container {
+  width: 100%;
+  max-width: 100%;
+  height: 100dvh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border: 10px red solid;
+}
+
+.about-info {
+  border: 10px solid yellow;
+  align-content: center;
+  padding: 2rem;
+}
+
+.truck-image-container {
+  max-width: 100%;
+  align-content: center;
+  border: 10px solid green;
+}
+
+.truck {
+  width: 100%;
+  height: 46rem;
+  object-fit: contain;
+  border-radius: 2px;
+}
