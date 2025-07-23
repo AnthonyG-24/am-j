@@ -32,6 +32,7 @@
           />
         </div>
 
+        <!--Video Container-->
         <div class="video-container">
           <video
             id="video-background"
@@ -41,27 +42,16 @@
             loop
             playsinline
             preload="auto"
-          >
-            <source src="videos/truck-driving-bg-video.mp4" type="video/mp4" />
-          </video>
-          <div
-            id="videoFallback"
-            style="
-              display: none;
-              width: 100%;
-              height: 100vh;
-              background-color: white;
-            "
-          ></div>
+          ></video>
+
+          <img
+            id="fallback"
+            style="display: none; width: 100%; height: 100vh; object-fit: cover"
+            class="gold-overlay"
+            src="images/Home Page Imgs/Gold bg behind logo.png"
+            alt="Fallback image"
+          />
         </div>
-        <!--Fall back to this gold overlay in case video don't work or load-->
-        <img
-          id="fallback"
-          style="display: none"
-          class="gold-overlay"
-          src="images/Home Page Imgs/Gold bg behind logo.png"
-          alt=""
-        />
 
         <div class="amj-logo-centered">
           <img

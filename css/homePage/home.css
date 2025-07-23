@@ -1,6 +1,5 @@
 .home-page-section {
   position: relative;
-  background-color: #627f61;
 }
 
 .home-page-container {
@@ -17,21 +16,19 @@
 }
 
 .video-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  z-index: 1;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: brightness(0.5);
 }
 
 .home-page-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none;
 }
 
 .amj-name-top-left {
@@ -39,6 +36,8 @@
   top: 1rem;
   left: 2rem;
   max-width: 100%;
+  background-color: #627f61;
+  border-radius: 5px;
 }
 
 .amj-left-corner-frame {
