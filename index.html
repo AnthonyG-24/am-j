@@ -26,10 +26,13 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/homePage/home.css" />
     <link rel="stylesheet" href="css/aboutPage/about.css" />
+    <link rel="stylesheet" href="css/servicePage/servicePage.css" />
+    <link rel="stylesheet" href="css/imagePage/images-of-work.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <!--Home Page-->
-    <section class="home-page-section">
+    <section id="home" class="home-page-section">
       <div class="home-page-container">
         <!--  <div class="amj-name-top-left">
           <img
@@ -81,7 +84,7 @@
     </section>
 
     <!--About Page-->
-    <section class="about-page-section">
+    <section id="about" class="about-page-section">
       <div class="about-page-wrapper">
         <div class="about-left-content">
           <h1 class="about-main-title">About AM&J Movers & Installation</h1>
@@ -122,7 +125,7 @@
             </div>
           </div>
 
-          <a href="contact.html" class="about-cta-button">
+          <a href="#contact" class="about-cta-button">
             Schedule Your Move or Installation Today
           </a>
         </div>
@@ -151,6 +154,142 @@
     </section>
 
     <!--Service Page-->
+    <section id="services" class="service-page-section">
+      <div class="services-page-container">
+        <h2>What We Do</h2>
+        <p>
+          AM&J offers reliable moving, appliance installation, and logistics
+          services. From homes to businesses, local to long-distance, we help
+          people and companies get things where they need to go.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-image service-1">
+            <img
+              class="service-1"
+              src="images/packing-boxes.jpg"
+              alt="scheduling and packing boxes"
+            />
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Moving Services</h3>
+            <ul class="service-list">
+              <li>Residential and commercial moving</li>
+              <li>Packing, unpacking, and careful handling of fragile items</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-image service-2">
+            <img
+              class="service-2"
+              src="images/appliances/appliance-09.jpg"
+              alt="installing fridge"
+            />
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Installations</h3>
+            <ul class="service-list">
+              <li>Furniture and appliance setup</li>
+              <li>Quick, clean, and professional work</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-image service-3">
+            <img
+              class="service-3"
+              src="images/truck-01.jpg"
+              alt="company truck"
+            />
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Logistics</h3>
+            <ul class="service-list">
+              <li>Route services across the U.S.</li>
+              <li>Fast delivery and distribution</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Images of work-->
+    <section class="images-of-work">
+      <div class="images-of-work-container">
+        <img
+          class="image-work-1"
+          src="images/appliances/appliance-07.jpg"
+          alt="truck"
+        />
+        <img
+          class="image-work-2"
+          src="images/appliances/appliance-02.jpg"
+          alt="truck"
+        />
+        <img
+          class="image-work-3"
+          src="images/appliances/appliance-03.jpg"
+          alt="truck"
+        />
+        <img
+          class="image-work-4"
+          src="images/appliances/appliance-04.jpg"
+          alt="truck"
+        />
+        <img
+          class="image-work-5"
+          src="images/appliances/appliance-05.jpg"
+          alt="truck"
+        />
+        <img
+          class="image-work-6"
+          src="images/appliances/appliance-06.jpg"
+          alt="truck"
+        />
+      </div>
+    </section>
+
+    <!--Contact Page-->
+    <section id="contact" class="contact-page-section">
+      <div class="contact-page-container"></div>
+    </section>
+
+    <!--Footer Section-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#home">Home</a></li>
+            <li class="footer-link"><a href="#about">About</a></li>
+            <li class="footer-link"><a href="#services">Services</a></li>
+            <li class="footer-link"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <div>
+            <strong>Email:</strong>
+            <p>amj.mccormick@yahoo.com</p>
+          </div>
+          <div>
+            <strong>Phone Number:</strong>
+            <p>912-208-7696</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> AM&J LLC. All rights reserved.</p>
+        <p>US DOT #3933701 | MC #1470092</p>
+      </div>
+    </footer>
   </body>
   <script src="js/script.js"></script>
 </html>

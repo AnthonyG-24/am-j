@@ -25,3 +25,6 @@ function updateVideoSource() {
   sourceElement.src = desiredSource;
   videoElement.load();
 }
+
+// ============== Get Year For Footer =============== //
+document.getElementById("year").textContent = new Date().getFullYear();

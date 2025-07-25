@@ -169,7 +169,7 @@
   }
 
   .about-help-card {
-    display: none;
+    margin-right: 8rem;
   }
 }
 
@@ -192,6 +192,10 @@
     padding: 0 1rem;
     font-size: 1rem;
   }
+
+  .about-help-card {
+    margin-right: 2rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -201,6 +205,10 @@
 
   .about-right-content {
     align-items: center;
+  }
+
+  .about-help-card {
+    display: none;
   }
 }
 
