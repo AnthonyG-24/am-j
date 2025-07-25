@@ -65,12 +65,13 @@
   justify-content: center;
   align-items: center;
   max-width: 100%;
+  width: 42rem;
   margin-top: 2rem;
 }
 
 .amj-logo-no-bg {
   max-width: 100%;
-  width: 500px;
+  width: 42rem;
   height: auto;
   object-fit: contain;
 }
@@ -84,17 +85,17 @@
 
 .larger-sub-text {
   font-family: "Anton", sans-serif;
-  font-size: 3rem;
   font-weight: 400;
   color: #ffffff;
   margin-bottom: -1rem;
+  font-size: clamp(1rem, 10vw, 3rem);
 }
 
 .smaller-sub-text {
   font-family: "Anton", sans-serif;
   color: #ffffff;
-  font-size: 2rem;
   font-weight: 400;
+  font-size: clamp(0.3rem, 10vw, 2rem);
 }
 
 @keyframes bounce {
@@ -159,6 +160,10 @@
   .amj-left-corner-frame {
     width: 150px;
   }
+
+  .video-container {
+    filter: brightness(0.4);
+  }
 }
 
 @media (max-width: 600px) {
@@ -182,16 +187,7 @@
   margin-bottom: 4rem;
 }
 
-.amj-logo-no-bg {
-  width: 22rem;
-}
-
-.larger-sub-text {
-  font-size: clamp(0.3rem, 10vw, 1.5rem);
-}
-
 .smaller-sub-text {
-  font-size: clamp(1rem, 10vw, 1.2rem);
   line-height: 2.5rem;
 }
 
