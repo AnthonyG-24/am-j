@@ -34,14 +34,29 @@
 
 .amj-name-top-left {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   left: 2rem;
-  max-width: 100%;
-  border-radius: 5px;
+  z-index: 10;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.amj-name-top-left:hover {
+  transform: scale(1.05);
 }
 
 .amj-left-corner-frame {
-  max-width: 220px;
+  width: clamp(60px, 8vw, 100px);
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  background-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.amj-left-corner-frame:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .amj-logo-centered {
@@ -124,6 +139,26 @@
   .subscript-text-under-logo {
     padding: 20px;
   }
+
+  .amj-name-top-left {
+    top: 1rem;
+    left: 1.5rem;
+  }
+
+  .amj-left-corner-frame {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .amj-name-top-left {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .amj-left-corner-frame {
+    width: 150px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -131,31 +166,42 @@
     padding: 1rem 0 1rem;
   }
 
+  .amj-name-top-left {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
   .amj-left-corner-frame {
-    width: 10rem;
-    margin-left: -25px;
+    width: 120px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
+}
 
-  .amj-logo-centered {
-    width: 26rem;
-    margin-bottom: 4rem;
-  }
+.amj-logo-centered {
+  width: 26rem;
+  margin-bottom: 4rem;
+}
 
-  .amj-logo-no-bg {
-    width: 22rem;
-  }
+.amj-logo-no-bg {
+  width: 22rem;
+}
 
-  .larger-sub-text {
-    font-size: clamp(0.3rem, 10vw, 1.5rem);
-  }
+.larger-sub-text {
+  font-size: clamp(0.3rem, 10vw, 1.5rem);
+}
 
-  .smaller-sub-text {
-    font-size: clamp(1rem, 10vw, 1.2rem);
-    line-height: 2.5rem;
-  }
+.smaller-sub-text {
+  font-size: clamp(1rem, 10vw, 1.2rem);
+  line-height: 2.5rem;
+}
 
-  .arrow {
-    width: 1.5rem;
+.arrow {
+  width: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .amj-left-corner-frame {
+    width: 100px;
   }
 }
 
@@ -168,6 +214,17 @@
 @media (max-width: 360px) {
   .home-page-container {
     padding: 0rem 0rem 4rem 0;
+  }
+
+  @media (max-width: 360px) {
+    .amj-name-top-left {
+      top: 0.25rem;
+      left: 0.25rem;
+    }
+
+    .amj-left-corner-frame {
+      width: 80px;
+    }
   }
 
   .amj-logo-centered {

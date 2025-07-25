@@ -1,13 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-
-  hamburger.addEventListener("click", () => {
-    console.log("Hamburger clicked"); // debug line
-    navLinks.classList.toggle("open");
-  });
-});
-
 // ================== Update Video Source Based on Screen Size ==================
 function updateVideoSource() {
   const sourceElement = document.getElementById("videoSource");
