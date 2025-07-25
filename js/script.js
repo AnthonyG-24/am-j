@@ -1,30 +1,42 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    console.log("Hamburger clicked"); // debug line
+    navLinks.classList.toggle("open");
+  });
+});
+
 // ================== Update Video Source Based on Screen Size ==================
 function updateVideoSource() {
   const videoElement = document.getElementById("video-background");
-  const fallbackImage = document.getElementById("fallback");
+  const fallbackDiv = document.getElementById("videoFallback");
 
+  if (!videoElement) return;
+
+  let videoSource;
   if (window.innerWidth <= 768) {
-    // Mobile devices → load the lightweight version
-    videoSource = "videos/amj-home-vid-SMALL.mp4";
+    videoSource = "videos/amj-home-vid-SMALL.mp4?v=" + new Date().getTime();
   } else {
-    // Desktop (main experience) → load the full-quality video
-    videoSource = "videos/amj-home-vid-BIG.mp4";
+    videoSource = "videos/amj-home-vid-BIG.mp4?v=" + new Date().getTime();
   }
 
-  // Always update video source and try to play
-  videoElement.src = videoSource;
-  videoElement.load();
-  videoElement
-    .play()
-    .then(() => {
-      videoElement.style.display = "block";
-      fallbackImage.style.display = "none";
-    })
-    .catch((error) => {
-      console.warn("Video failed to autoplay. Showing fallback:", error);
-      videoElement.style.display = "none";
-      fallbackImage.style.display = "block";
-    });
+  // Only change source if it is different to avoid unnecessary reloads
+  if (videoElement.src !== videoSource) {
+    videoElement.src = videoSource;
+    videoElement.load();
+    videoElement
+      .play()
+      .then(() => {
+        videoElement.style.display = "block";
+        fallbackDiv.style.display = "none";
+      })
+      .catch(() => {
+        videoElement.style.display = "none";
+        fallbackDiv.style.display = "block";
+      });
+  }
 }
 
 window.addEventListener("load", updateVideoSource);

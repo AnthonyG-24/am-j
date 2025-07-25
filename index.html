@@ -16,23 +16,31 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/homePage/home.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/aboutPage/about.css" />
   </head>
   <body>
     <!--Home Page-->
     <section class="home-page-section">
       <div class="home-page-container">
-        <div class="amj-name-top-left">
+        <!--  <div class="amj-name-top-left">
           <img
             class="amj-left-corner-frame"
             src="images/Home Page Imgs/amj-top-left.png"
             alt=""
           />
-        </div>
+        </div> -->
 
-        <!--Video Container-->
+        <!-- Video Container -->
         <div class="video-container">
           <video
             id="video-background"
@@ -42,15 +50,19 @@
             loop
             playsinline
             preload="auto"
-          ></video>
-
-          <img
-            id="fallback"
-            style="display: none; width: 100%; height: 100vh; object-fit: cover"
-            class="gold-overlay"
-            src="images/Home Page Imgs/Gold bg behind logo.png"
-            alt="Fallback image"
-          />
+          >
+            <!-- The source will be set dynamically -->
+            <source src="your-video-url.mp4" type="video/mp4" />
+          </video>
+          <div
+            id="videoFallback"
+            style="
+              display: none;
+              width: 100%;
+              height: 100vh;
+              background-color: #09ff00;
+            "
+          ></div>
         </div>
 
         <div class="amj-logo-centered">
@@ -78,27 +90,75 @@
 
     <!--About Page-->
     <section class="about-page-section">
-      <div class="about-page-container">
-        <div class="about-info">
-          <span class="small-section-label">WHO WE ARE</span>
-          <h1 class="about-heading">The Power Behind Every Delivery</h1>
-          <p>
-            AM&J provides furniture moving, appliance installation, and
-            logistics services across the U.S. and internationally. From
-            household setups to long-haul routes, we deliver dependable service
-            wherever it’s needed.
+      <div class="about-page-wrapper">
+        <div class="about-left-content">
+          <h1 class="about-main-title">About AM&J Movers & Installation</h1>
+
+          <p class="about-description">
+            At AM&J, we’re not just movers. We help people and businesses
+            transition smoothly, whether it’s a local move or a cross-country
+            job. From careful packing and furniture moving to appliance
+            installation and long-haul deliveries, our team handles it all with
+            precision and care.
           </p>
+
+          <div class="about-features-grid">
+            <div class="about-feature-item">
+              <div class="about-feature-content">
+                <h3>Furniture Moving & Packing</h3>
+                <p>
+                  We take the stress out of moving. Our team packs and
+                  transports furniture with care, using proven methods that
+                  protect your belongings from start to finish. Whether it’s a
+                  local move or international shipping, we make sure everything
+                  arrives safely and on time.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="about-feature-content">
+                <h3>Appliance Installation & Delivery Routes</h3>
+                <p>
+                  Need a new appliance set up? We’ve got it covered. Our
+                  technicians handle both home and commercial installations with
+                  efficiency and attention to detail. We also manage dependable
+                  delivery routes, from local stops to coast-to-coast hauls,
+                  helping logistics companies move freight with confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="about-cta-button">
+            Schedule Your Move or Installation Today
+          </a>
         </div>
 
-        <div class="truck-image-container">
-          <img
-            class="truck"
-            src="images/truck-02.jpg"
-            alt="AM&J delivery truck"
-          />
+        <div class="about-right-content">
+          <div class="about-main-image">
+            <img class="truck-image" src="images/truck-02.jpg" alt="truck" />
+          </div>
+
+          <div class="about-help-card">
+            <div class="about-help-card-header">
+              Reliable Service You Can Count On
+            </div>
+            <h3 class="about-help-card-title">
+              Your Trusted Moving and Installation Partner
+            </h3>
+            <p class="about-help-card-text">
+              Every job matters. At AM&J, we bring years of experience and close
+              attention to detail into everything we do. Whether you’re moving a
+              couch or coordinating a delivery across the country, we make it
+              simple and stress-free.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
+    <!--Service Page-->
   </body>
   <script src="js/script.js"></script>
 </html>
