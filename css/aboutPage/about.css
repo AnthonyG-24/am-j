@@ -96,7 +96,6 @@
 }
 
 .about-right-content {
-  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -113,38 +112,6 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
-}
-
-.about-help-card {
-  position: absolute;
-  bottom: -2rem;
-  right: -2rem;
-  background: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  max-width: 100%;
-  width: 18rem;
-}
-
-.about-help-card-header {
-  color: #2563eb;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.about-help-card-title {
-  color: #1f2937;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.about-help-card-text {
-  color: #6b7280;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
 @media (max-width: 1024px) {
@@ -167,10 +134,6 @@
     margin: 0 auto;
     width: 50%;
   }
-
-  .about-help-card {
-    margin-right: 8rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -192,10 +155,6 @@
     padding: 0 1rem;
     font-size: 1rem;
   }
-
-  .about-help-card {
-    margin-right: 2rem;
-  }
 }
 
 @media (max-width: 600px) {
@@ -205,10 +164,6 @@
 
   .about-right-content {
     align-items: center;
-  }
-
-  .about-help-card {
-    display: none;
   }
 }
 
