@@ -125,6 +125,10 @@
 }
 
 @media (max-width: 600px) {
+  .home-page-container {
+    padding: 1rem 0 1rem;
+  }
+
   .amj-left-corner-frame {
     width: 10rem;
     margin-left: -25px;
@@ -139,12 +143,8 @@
     width: 22rem;
   }
 
-  .subscript-text-under-logo {
-    padding: 0.5rem;
-  }
-
   .larger-sub-text {
-    font-size: clamp(1rem, 10vw, 2rem);
+    font-size: clamp(0.3rem, 10vw, 2rem);
   }
 
   .smaller-sub-text {

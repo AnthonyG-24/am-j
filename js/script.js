@@ -10,37 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ================== Update Video Source Based on Screen Size ==================
 function updateVideoSource() {
+  const sourceElement = document.getElementById("videoSource");
   const videoElement = document.getElementById("video-background");
-  const fallbackDiv = document.getElementById("videoFallback");
 
-  if (!videoElement) return;
+  if (!videoElement || !sourceElement) return;
 
-  let videoSource;
-  if (window.innerWidth <= 768) {
-    videoSource = "videos/amj-home-vid-SMALL.mp4?v=" + new Date().getTime();
-  } else {
-    videoSource = "videos/amj-home-vid-BIG.mp4?v=" + new Date().getTime();
-  }
+  const isMobile = window.innerWidth <= 768;
+  const desiredSource = isMobile
+    ? "videos/amj-home-vid-SMALL-compressed.mp4"
+    : "videos/amj-home-vid-BIG-compressed.mp4";
 
-  // Only change source if it is different to avoid unnecessary reloads
-  if (videoElement.src !== videoSource) {
-    videoElement.src = videoSource;
-    videoElement.load();
-    videoElement
-      .play()
-      .then(() => {
-        videoElement.style.display = "block";
-        fallbackDiv.style.display = "none";
-      })
-      .catch(() => {
-        videoElement.style.display = "none";
-        fallbackDiv.style.display = "block";
-      });
-  }
+  if (sourceElement.src.includes(desiredSource)) return;
+
+  sourceElement.src = desiredSource;
+  videoElement.load();
 }
-
-window.addEventListener("load", updateVideoSource);
-window.addEventListener("resize", () => {
-  clearTimeout(window.resizeTimeout);
-  window.resizeTimeout = setTimeout(updateVideoSource, 200);
-});

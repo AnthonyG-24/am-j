@@ -13,7 +13,6 @@
   gap: 2rem;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
 }
@@ -149,10 +148,6 @@
 }
 
 @media (max-width: 1024px) {
-  .about-page-wrapper {
-    overflow: scroll;
-  }
-
   .about-page-section {
     padding: 2rem;
   }
@@ -174,11 +169,7 @@
   }
 
   .about-help-card {
-    right: auto;
-    left: 50%;
-    bottom: -12rem;
-    transform: translateX(-50%);
-    width: clamp(16rem, 90%, 22rem);
+    display: none;
   }
 }
 
@@ -197,12 +188,6 @@
     width: 70%;
   }
 
-  .about-help-card {
-    margin-bottom: 10rem;
-    margin-left: 10rem;
-    width: 14rem;
-  }
-
   .about-cta-button {
     padding: 0 1rem;
     font-size: 1rem;
@@ -216,12 +201,6 @@
 
   .about-right-content {
     align-items: center;
-  }
-
-  .about-help-card {
-    margin: 0 auto;
-    width: clamp(16rem, 90%, 20rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -241,9 +220,5 @@
 
   .about-cta-button {
     font-size: 1rem;
-  }
-
-  .about-help-card {
-    bottom: -15rem;
   }
 }
