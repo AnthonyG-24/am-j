@@ -67,13 +67,11 @@
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  width: 48rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .amj-logo-no-bg {
-  max-width: 100%;
-  width: 480rem;
+  width: 32rem;
   height: auto;
   object-fit: cover;
 }
@@ -82,7 +80,6 @@
   color: #ffffff;
   text-align: center;
   margin-top: -10rem;
-  margin-bottom: 4rem;
 }
 
 .larger-sub-text {
@@ -200,6 +197,10 @@
 @media (max-width: 480px) {
   .amj-left-corner-frame {
     width: 100px;
+  }
+
+  .amj-logo-no-bg {
+    width: 20rem;
   }
 }
 
