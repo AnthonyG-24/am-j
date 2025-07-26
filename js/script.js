@@ -17,4 +17,18 @@ function updateVideoSource() {
 }
 
 // ============== Get Year For Footer =============== //
-document.getElementById("year").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".navbar__toggle");
+  const links = document.querySelector(".navbar__links");
+
+  toggle.addEventListener("click", function () {
+    links.classList.toggle("active");
+  });
+
+  // Optional: Close menu when a link is clicked (for single-page navigation)
+  links.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      links.classList.remove("active");
+    });
+  });
+});

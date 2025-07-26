@@ -1,5 +1,7 @@
 .home-page-section {
   position: relative;
+  /*   background-color: #627f61;
+ */
 }
 
 .home-page-container {
@@ -65,15 +67,15 @@
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  width: 42rem;
+  width: 48rem;
   margin-top: 2rem;
 }
 
 .amj-logo-no-bg {
   max-width: 100%;
-  width: 42rem;
+  width: 480rem;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .subscript-text-under-logo {
