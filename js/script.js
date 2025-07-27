@@ -17,6 +17,9 @@ function updateVideoSource() {
 }
 
 // ============== Get Year For Footer =============== //
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// ============== Navbar code =============== //
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.querySelector(".navbar__toggle");
   const links = document.querySelector(".navbar__links");
