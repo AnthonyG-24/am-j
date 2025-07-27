@@ -32,12 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-// ============ links with # ============== //
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-    history.replaceState(null, null, " "); // removes # from URL
-  }
-}
