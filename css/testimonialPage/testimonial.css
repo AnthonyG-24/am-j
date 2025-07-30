@@ -1,9 +1,7 @@
 .testimonial-page-section {
   padding: 4rem 1rem;
   background: linear-gradient(135deg, #f0e054 0%, #f0e054 60%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 44rem;
 }
 
 .testimonial-page-container {
@@ -133,9 +131,16 @@
   font-size: 1rem;
 }
 
+@media (max-width: 1080px) {
+  .testimonial-page-section {
+    height: 70rem;
+  }
+}
+
 @media (max-width: 768px) {
   .testimonial-page-section {
     padding: 2rem 1rem;
+    height: auto;
   }
 
   .testimonial-header h2 {
