@@ -29,6 +29,8 @@
       rel="stylesheet"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/homePage/home.css" />
     <link rel="stylesheet" href="css/nav.css" />
@@ -45,15 +47,11 @@
     <!--Home Page-->
     <section id="home" class="home-page-section">
       <div class="home-page-container">
-        <!--  <div class="amj-name-top-left">
-          <img
-            class="amj-left-corner-frame"
-            src="images/Home Page Imgs/amj-top-left.png"
-            alt=""
-          />
-        </div> -->
-
-        <header class="main-header">
+        <header
+          class="main-header"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           <div class="brand-logo">AM&J</div>
 
           <input type="checkbox" id="nav-toggle" />
@@ -62,19 +60,28 @@
             <box-icon name="x" id="close-icon"></box-icon>
           </label>
 
-          <nav class="nav-links">
+          <nav
+            class="nav-links"
+            data-aos="fade-down"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+          >
             <a href="#about" style="--i: 0">About</a>
             <a href="#services" style="--i: 2">Services</a>
             <a href="#testimonials" style="--i: 3">Testimonials</a>
             <a href="#images" style="--i: 4">Images</a>
-            <a href="#contact" style="--i: 4">Contact</a>
+            <a href="#contact" style="--i: 5">Contact</a>
           </nav>
         </header>
 
-        <!-- Boxicons Script -->
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-        <div class="video-container">
+        <div
+          class="video-container"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <video
             id="video-background"
             class="home-page-video"
@@ -92,7 +99,12 @@
           </video>
         </div>
 
-        <div class="amj-logo-centered">
+        <div
+          class="amj-logo-centered"
+          data-aos="fade-up"
+          data-aos-delay="450"
+          data-aos-duration="1000"
+        >
           <img
             class="amj-logo-no-bg"
             src="images/Home Page Imgs/amj logo-no-bg.png"
@@ -100,28 +112,39 @@
           />
         </div>
 
-        <sub class="subscript-text-under-logo">
+        <sub
+          class="subscript-text-under-logo"
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+        >
           <p class="larger-sub-text">“We move. We install. We deliver.”</p>
-          <!-- <p class="smaller-sub-text">
-            Need something moved, installed, or delivered? We’ve got you
-            covered.
-          </p> -->
         </sub>
-        <!--   <img
-          class="arrow"
-          src="images/Home Page Imgs/arrow pointing down.png"
-          alt=""
-        /> -->
       </div>
     </section>
 
     <!--About Page-->
-    <section id="about" class="about-page-section">
+    <section
+      id="about"
+      class="about-page-section"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="about-page-wrapper">
-        <div class="about-left-content">
+        <div
+          class="about-left-content"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           <h1 class="about-main-title">About AM&J Movers & Installation</h1>
 
-          <p class="about-description">
+          <p
+            class="about-description"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             AM&J, we’re not just movers. We help people and businesses
             transition smoothly, whether it’s a local move or a cross-country
             job. From careful packing and furniture moving to appliance
@@ -130,7 +153,12 @@
           </p>
 
           <div class="about-features-grid">
-            <div class="about-feature-item">
+            <div
+              class="about-feature-item"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <div class="about-feature-content">
                 <h3>Furniture Moving & Packing</h3>
                 <p>
@@ -143,7 +171,12 @@
               </div>
             </div>
 
-            <div class="about-feature-item">
+            <div
+              class="about-feature-item"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="1000"
+            >
               <div class="about-feature-content">
                 <h3>Appliance Installation & Delivery Routes</h3>
                 <p>
@@ -157,12 +190,23 @@
             </div>
           </div>
 
-          <a href="#contact" class="about-cta-button">
+          <a
+            href="#contact"
+            class="about-cta-button"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+            data-aos-duration="800"
+          >
             Schedule Your Move or Installation Today
           </a>
         </div>
 
-        <div class="about-right-content">
+        <div
+          class="about-right-content"
+          data-aos="fade-left"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+        >
           <div class="about-main-image">
             <img class="truck-image" src="images/truck-02.jpg" alt="truck" />
           </div>
@@ -180,9 +224,14 @@
           people and companies get things where they need to go.
         </p>
       </div>
-
       <div class="services-grid">
-        <div class="service-card">
+        <div
+          class="service-card"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <div class="service-image service-1">
             <img
               class="service-1"
@@ -199,7 +248,13 @@
           </div>
         </div>
 
-        <div class="service-card">
+        <div
+          class="service-card"
+          data-aos="fade-right"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <div class="service-image service-2">
             <img
               class="service-2"
@@ -216,7 +271,13 @@
           </div>
         </div>
 
-        <div class="service-card">
+        <div
+          class="service-card"
+          data-aos="fade-right"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <div class="service-image service-3">
             <img
               class="service-3"
@@ -235,10 +296,20 @@
       </div>
     </section>
 
-    <!--Testimmonial Page-->
-    <section class="testimonial-page-section" id="testimonials">
+    <!--Testimonial Page-->
+    <section
+      class="testimonial-page-section"
+      id="testimonials"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="testimonial-page-container">
-        <div class="testimonial-header">
+        <div
+          class="testimonial-header"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           <h2>What Our Customers Say</h2>
           <p>
             Discover why so many of our customers trust us with their business
@@ -247,7 +318,12 @@
         </div>
 
         <div class="testimonials-grid">
-          <div class="testimonial-container">
+          <div
+            class="testimonial-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -270,7 +346,12 @@
             </div>
           </div>
 
-          <div class="testimonial-container">
+          <div
+            class="testimonial-container"
+            data-aos="fade-up"
+            data-aos-delay="350"
+            data-aos-duration="1000"
+          >
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -293,7 +374,12 @@
             </div>
           </div>
 
-          <div class="testimonial-container">
+          <div
+            class="testimonial-container"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -316,7 +402,12 @@
             </div>
           </div>
 
-          <div class="testimonial-container">
+          <div
+            class="testimonial-container"
+            data-aos="fade-up"
+            data-aos-delay="650"
+            data-aos-duration="1000"
+          >
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -328,7 +419,7 @@
               <div class="testimonial-quote">
                 "Professional, and handled everything with care. Made the whole
                 move smooth and stress-free. Efficient, friendly, and reasonably
-                priced. Would definitely use again!""
+                priced. Would definitely use again!"
               </div>
             </div>
             <div class="testimonial-author">
@@ -344,10 +435,17 @@
     </section>
 
     <!--Demo section-->
-    <section class="demo-section">
-      <h1>Reliable Moving, Installation & Logistics. Anywhere You Need</h1>
+    <section class="demo-section" data-aos="fade-up" data-aos-duration="1000">
+      <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        Reliable Moving, Installation & Logistics. Anywhere You Need
+      </h1>
       <div class="demo-container">
-        <div class="video-working-container">
+        <div
+          class="video-working-container"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <video
             class="video-working"
             autoplay
@@ -359,7 +457,12 @@
             <source src="videos/amj-movers.mp4" type="video/mp4" />
           </video>
         </div>
-        <div class="right-side-content">
+        <div
+          class="right-side-content"
+          data-aos="fade-up"
+          data-aos-delay="450"
+          data-aos-duration="1000"
+        >
           <span class="tagline">"Packing Every Mile With A Smile"</span>
           We make sure every move is handled with integrity, professionalism,
           and a commitment to customer satisfaction.
@@ -368,52 +471,80 @@
     </section>
 
     <!--Images of work-->
-    <section class="images-of-work" id="images">
+    <section
+      class="images-of-work"
+      id="images"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="images-of-work-container">
         <img
           class="image-work-1"
           src="images/appliances/appliance-07.jpg"
           alt="truck"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
         />
         <img
           class="image-work-2"
           src="images/appliances/appliance-02.jpg"
           alt="truck"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
         />
         <img
           class="image-work-3"
           src="images/appliances/appliance-03.jpg"
           alt="truck"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="800"
         />
         <img
           class="image-work-4"
           src="images/appliances/appliance-04.jpg"
           alt="truck"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="800"
         />
         <img
           class="image-work-5"
           src="images/appliances/appliance-05.jpg"
           alt="truck"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="800"
         />
         <img
           class="image-work-6"
           src="images/appliances/appliance-06.jpg"
           alt="truck"
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="800"
         />
       </div>
     </section>
 
     <!--Contact Page-->
-    <section id="contact" class="contact-page-section">
-      <div class="contact-page-container">
-        <div class="contact-header">
+    <section id="contact" class="contact-page-section" data-aos="fade-up">
+      <div
+        class="contact-page-container"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="contact-header" data-aos="fade-up" data-aos-delay="200">
           <h1 class="contact-title">Get In Touch</h1>
           <p class="contact-subtitle">
             Ready to start a conversation? We'd love to hear from you.
           </p>
         </div>
-        <div class="contact-methods">
-          <div class="contact-item">
+
+        <div class="contact-methods" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="400">
             <div class="contact-icon">
               <img
                 src="images/email-1-svgrepo-com.svg"
@@ -427,7 +558,8 @@
               <span class="contact-value">amj.mccormick@yahoo.com</span>
             </div>
           </div>
-          <div class="contact-item">
+
+          <div class="contact-item" data-aos="fade-left" data-aos-delay="500">
             <div class="contact-icon">
               <img
                 src="images/phone-svgrepo-com.svg"
@@ -479,4 +611,8 @@
     </footer>
   </body>
   <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
