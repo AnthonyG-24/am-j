@@ -35,3 +35,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// ================== Modal Functionality ==================
+function openModal() {
+  document.getElementById("contactModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("contactModal").style.display = "none";
+}
+
+// Optional: Close modal when clicking outside of it
+window.onclick = function (event) {
+  const modal = document.getElementById("contactModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// ================== Contact Form Validation ==================
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+  const email = form.email.value.trim();
+  const phone = form.phone.value.trim();
+
+  if (!email && !phone) {
+    e.preventDefault(); // stop form submission
+    alert("Please provide at least your email or phone number.");
+  }
+});

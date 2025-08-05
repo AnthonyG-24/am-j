@@ -32,12 +32,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/homePage/home.css" />
     <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/homePage/home.css" />
     <link rel="stylesheet" href="css/aboutPage/about.css" />
     <link rel="stylesheet" href="css/servicePage/servicePage.css" />
     <link rel="stylesheet" href="css/testimonialPage/testimonial.css" />
-    <link rel="stylesheet" href="css/servicePage/servicePage.css" />
     <link rel="stylesheet" href="css/demoPage/demo.css" />
     <link rel="stylesheet" href="css/imagePage/images-of-work.css" />
     <link rel="stylesheet" href="css/contactPage/contact.css" />
@@ -190,13 +189,7 @@
             </div>
           </div>
 
-          <a
-            href="#contact"
-            class="about-cta-button"
-            data-aos="zoom-in"
-            data-aos-delay="500"
-            data-aos-duration="800"
-          >
+          <a href="#contact" class="about-cta-button">
             Schedule Your Move or Installation Today
           </a>
         </div>
@@ -204,8 +197,8 @@
         <div
           class="about-right-content"
           data-aos="fade-left"
-          data-aos-delay="600"
-          data-aos-duration="1000"
+          data-aos-delay="200"
+          data-aos-duration="600"
         >
           <div class="about-main-image">
             <img class="truck-image" src="images/truck-02.jpg" alt="truck" />
@@ -434,38 +427,53 @@
       </div>
     </section>
 
-    <!--Demo section-->
-    <section class="demo-section" data-aos="fade-up" data-aos-duration="1000">
-      <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-        Reliable Moving, Installation & Logistics. Anywhere You Need
-      </h1>
-      <div class="demo-container">
-        <div
-          class="video-working-container"
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="1000"
-        >
-          <video
-            class="video-working"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-          >
-            <source src="videos/amj-movers.mp4" type="video/mp4" />
-          </video>
+    <!-- Demo Page -->
+    <section
+      id=""
+      class="demo-page-section"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <div class="demo-page-wrapper">
+        <div class="demo-left-content">
+          <div class="demo-container">
+            <div class="demo-video-working-container">
+              <video
+                class="demo-video-working"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+              >
+                <source src="videos/amj-movers.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="demo-right-side-content">
+              <span class="demo-tagline">
+                "Packing Every Mile With A Smile"
+              </span>
+            </div>
+          </div>
         </div>
-        <div
-          class="right-side-content"
-          data-aos="fade-up"
-          data-aos-delay="450"
-          data-aos-duration="1000"
-        >
-          <span class="tagline">"Packing Every Mile With A Smile"</span>
-          We make sure every move is handled with integrity, professionalism,
-          and a commitment to customer satisfaction.
+
+        <div class="demo-right-content">
+          <h1 class="demo-main-title">
+            Where Every Move Feels Like a Fresh Start
+          </h1>
+
+          <p class="demo-description">
+            At <strong>AM&J</strong>, we believe moving is more than just
+            transportation — it's about helping people move forward. From
+            growing families to expanding businesses, every transition
+            represents a fresh chapter, and we’re honored to be part of it.
+            <br /><br />
+            Our mission is simple: deliver a service rooted in trust, care, and
+            professionalism. We show up with the experience, tools, and mindset
+            to turn stress into confidence — so you can focus on what comes
+            next, not what’s in the truck.
+          </p>
         </div>
       </div>
     </section>
@@ -529,55 +537,130 @@
       </div>
     </section>
 
-    <!--Contact Page-->
-    <section
-      id="contact"
-      class="contact-page-section"
-      style="overflow-x: hidden; width: 100%"
-    >
-      <div
-        class="contact-page-container"
-        style="overflow-x: hidden; max-width: 100%"
-      >
-        <div class="contact-header" data-aos="fade-up" data-aos-delay="200">
+    <!-- Contact Page -->
+    <section id="contact" class="contact-page-section">
+      <div class="contact-page-container">
+        <header class="contact-header">
           <h1 class="contact-title">Get In Touch</h1>
           <p class="contact-subtitle">
             Ready to start a conversation? We'd love to hear from you.
           </p>
-        </div>
+        </header>
 
-        <div class="contact-methods" data-aos="fade-up" data-aos-delay="300">
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="contact-icon">
-              <img
-                src="images/email-1-svgrepo-com.svg"
-                alt="Email icon"
-                width="24"
-                height="24"
-                style="max-width: 100%"
+        <h1
+          style="
+            font-size: clamp(1.5rem, 2vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin: 1rem 0 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          "
+        >
+          Please provide your name, email, and/or phone number
+        </h1>
+        <div class="contact-content">
+          <form
+            id="contactForm"
+            class="contact-form"
+            action="https://formsubmit.co/amj.mccormick@yahoo.com"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+          >
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+                autocomplete="name"
               />
             </div>
-            <div class="contact-details">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">amj.mccormick@yahoo.com</span>
-            </div>
-          </div>
 
-          <div class="contact-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="contact-icon">
-              <img
-                src="images/phone-svgrepo-com.svg"
-                alt="Phone icon"
-                width="24"
-                height="24"
-                style="max-width: 100%"
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                autocomplete="email"
               />
             </div>
-            <div class="contact-details">
-              <span class="contact-label">Phone</span>
-              <span class="contact-value">+1 (919)-771-3747</span>
+
+            <div class="form-group">
+              <label for="phone">Your Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone Number"
+                autocomplete="tel"
+                pattern="^\+?[0-9\s\-()]{7,15}$"
+                title="Please enter a valid phone number"
+              />
             </div>
-          </div>
+
+            <div class="form-group">
+              <label for="message">Your Message (Optional)</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your message here..."
+                rows="5"
+              ></textarea>
+            </div>
+
+            <!-- Hidden inputs -->
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://yourdomain.com/thank-you.html"
+            />
+
+            <button type="submit">Send</button>
+          </form>
+
+          <aside class="contact-methods" aria-label="Other ways to contact">
+            <h4>Ways to contact:</h4>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <img
+                  src="images/email-1-svgrepo-com.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Email</span>
+                <a href="mailto:amj.mccormick@yahoo.com" class="contact-value"
+                  >amj.mccormick@yahoo.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <img
+                  src="images/phone-svgrepo-com.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+19197713747" class="contact-value"
+                  >+1 (919)-771-3747</a
+                >
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -589,7 +672,7 @@
           <h3>Quick Links</h3>
           <ul class="footer-links">
             <li class="footer-link"><a href="#home">Home</a></li>
-            <li class="footer-link"><a href="#about">About</a></li>
+            <li class="footer-link"><a href="#demo">About</a></li>
             <li class="footer-link"><a href="#services">Services</a></li>
             <li class="footer-link"><a href="#images">Images</a></li>
             <li class="footer-link"><a href="#contact">Contact</a></li>

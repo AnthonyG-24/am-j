@@ -1,7 +1,7 @@
 .testimonial-page-section {
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, #f0e054 0%, #f0e054 60%);
   height: 44rem;
+  background-color: #f0e054;
 }
 
 .testimonial-page-container {
