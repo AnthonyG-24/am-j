@@ -564,7 +564,6 @@
             class="contact-form"
             action="https://formsubmit.co/amj.mccormick@yahoo.com"
             method="POST"
-            novalidate
             aria-label="Contact form"
           >
             <div class="form-group">
@@ -586,6 +585,7 @@
                 id="email"
                 name="email"
                 placeholder="Your Email"
+                required
                 autocomplete="email"
               />
             </div>
@@ -598,8 +598,6 @@
                 name="phone"
                 placeholder="Your Phone Number"
                 autocomplete="tel"
-                pattern="^\+?[0-9\s\-()]{7,15}$"
-                title="Please enter a valid phone number"
               />
             </div>
 
@@ -612,11 +610,6 @@
                 rows="5"
               ></textarea>
             </div>
-
-            <!-- Hidden inputs -->
-            <input type="hidden" name="_captcha" value="false" />
-
-            <input type="hidden" name="_next" value="thank-you.html" />
 
             <button type="submit">Send</button>
           </form>
