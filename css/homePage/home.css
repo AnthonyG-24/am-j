@@ -1,12 +1,10 @@
 .home-page-section {
   position: relative;
-  /*   background-color: #627f61;
- */
+  overflow: hidden;
 }
 
 .home-page-container {
   width: 100%;
-  max-width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
@@ -14,18 +12,27 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-  padding-bottom: 8rem;
+  padding: 2rem 1rem;
 }
 
 .video-container {
-  z-index: -1;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  filter: brightness(0.6);
+  inset: 0;
+  z-index: -2;
+  filter: brightness(0.45) contrast(1.1);
+}
+
+.video-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.4) 0%,
+    rgba(43, 147, 72, 0.1) 50%,
+    rgba(10, 10, 10, 0.4) 100%
+  );
+  z-index: 1;
 }
 
 .home-page-video {
@@ -34,211 +41,298 @@
   object-fit: cover;
 }
 
-.amj-name-top-left {
-  position: absolute;
-  top: 1.5rem;
-  left: 2rem;
-  z-index: 10;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.amj-name-top-left:hover {
-  transform: scale(1.05);
-}
-
-.amj-left-corner-frame {
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
-  display: block;
-  border-radius: 2px;
-  background-color: transparent;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease;
-}
-
-.amj-left-corner-frame:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
 .amj-logo-centered {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  margin-top: 4rem;
+  text-align: center;
+  max-width: 50rem;
+  z-index: 10;
+  position: relative;
 }
 
 .amj-logo-no-bg {
-  width: 32rem;
+  width: clamp(20rem, 45vw, 34rem);
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  filter: drop-shadow(0 0.75rem 1.5rem rgba(0, 0, 0, 0.4));
+  margin-bottom: -3rem;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.amj-logo-no-bg:hover {
+  transform: scale(1.02) translateY(-0.25rem);
+  filter: drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0.25rem 0.75rem rgba(43, 147, 72, 0.3));
 }
 
 .subscript-text-under-logo {
-  color: #ffffff;
+  color: var(--neutral-light);
   text-align: center;
-  margin-top: -10rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding-top: 1rem;
 }
 
 .larger-sub-text {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
-  color: #ffffff;
-  margin-bottom: -1rem;
-  font-size: clamp(1rem, 10vw, 3rem);
+  font-family: var(--font-heading);
+  font-weight: var(--fw-extra-bold);
+  color: var(--neutral-light);
+  font-size: clamp(1.25rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.6);
+  position: relative;
 }
 
-.smaller-sub-text {
-  font-family: "Anton", sans-serif;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: clamp(0.3rem, 10vw, 2rem);
+.larger-sub-text::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6rem;
+  height: 0.125rem;
+  background: var(--accent-gradient);
+  border-radius: 0.0625rem;
 }
 
-@keyframes bounce {
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-primary,
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.25rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.025rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 11rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-primary::before,
+.cta-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.cta-primary {
+  background: var(--primary-2);
+  color: var(--neutral-dark);
+  box-shadow: 0 0.375rem 1rem rgba(238, 239, 32, 0.4),
+    0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.cta-primary::before {
+  background: var(--primary);
+}
+
+.cta-primary:hover::before {
+  left: 0;
+}
+
+.cta-primary:hover {
+  color: var(--neutral-light);
+  transform: translateY(-0.1875rem);
+  box-shadow: 0 0.5rem 1.25rem rgba(43, 147, 72, 0.4),
+    0 0.25rem 0.5rem rgba(238, 239, 32, 0.2);
+}
+
+.cta-secondary {
+  background: rgba(248, 249, 250, 0.1);
+  color: var(--neutral-light);
+  border: 0.125rem solid rgba(248, 249, 250, 0.4);
+  box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.cta-secondary::before {
+  background: var(--neutral-light);
+}
+
+.cta-secondary:hover::before {
+  left: 0;
+}
+
+.cta-secondary:hover {
+  color: var(--neutral-dark);
+  transform: translateY(-0.1875rem);
+  border-color: var(--neutral-light);
+  box-shadow: 0 0.5rem 1.25rem rgba(248, 249, 250, 0.3),
+    0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+.scroll-text {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
+  color: var(--neutral-light);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.scroll-arrow {
+  width: 1rem;
+  height: 1rem;
+  border: 0.125rem solid var(--neutral-light);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
   0%,
   100% {
-    transform: translateY(0);
+    transform: rotate(45deg) translateY(0);
+    opacity: 0.6;
   }
   50% {
-    transform: translateY(-10px);
-  }
-}
-
-.arrow {
-  margin: 0 auto;
-  display: block;
-  margin-top: -4rem;
-  max-width: 100%;
-  width: 2rem;
-
-  animation: bounce 1.2s ease-in-out infinite;
-}
-
-@media (max-width: 1440px) {
-  .home-page-container {
-    height: auto;
+    transform: rotate(45deg) translateY(0.5rem);
+    opacity: 1;
   }
 }
 
 @media (max-width: 1024px) {
+  .amj-logo-no-bg {
+    width: clamp(18rem, 50vw, 30rem);
+    margin-bottom: -2.5rem;
+  }
+
   .larger-sub-text {
-    font-size: 2rem;
-  }
-
-  .smaller-sub-text {
-    font-size: 1.7rem;
-  }
-
-  .arrow {
-    width: 2rem;
-  }
-
-  .subscript-text-under-logo {
-    padding: 20px;
-  }
-
-  .amj-name-top-left {
-    top: 1rem;
-    left: 1.5rem;
-  }
-
-  .amj-left-corner-frame {
-    width: 180px;
+    font-size: clamp(1.125rem, 4vw, 2.5rem);
+    margin-bottom: 2rem;
   }
 }
 
-@media (max-width: 768px) {
-  .amj-name-top-left {
-    top: 1rem;
-    left: 1rem;
-  }
-
-  .amj-left-corner-frame {
-    width: 150px;
+@media (max-width: 820px) {
+  .home-page-container {
+    padding: 1.5rem 1rem;
   }
 
   .video-container {
-    filter: brightness(0.4);
+    filter: brightness(0.35) contrast(1.2);
+  }
+
+  .amj-logo-no-bg {
+    width: clamp(16rem, 55vw, 26rem);
+    margin-bottom: -2rem;
+  }
+
+  .larger-sub-text {
+    font-size: clamp(1rem, 3.5vw, 2.25rem);
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-cta {
+    gap: 1.25rem;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    min-width: 10rem;
+  }
+
+  .scroll-indicator {
+    bottom: 1.5rem;
+  }
+
+  .larger-sub-text::after {
+    width: 5rem;
   }
 }
 
 @media (max-width: 600px) {
   .home-page-container {
-    padding: 1rem 0 1rem;
-  }
-
-  .amj-name-top-left {
-    top: 0.5rem;
-    left: 0.5rem;
-  }
-
-  .amj-left-corner-frame {
-    width: 120px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-}
-
-.amj-logo-centered {
-  width: 26rem;
-  margin-bottom: 4rem;
-}
-
-.smaller-sub-text {
-  line-height: 2.5rem;
-}
-
-.arrow {
-  width: 1.5rem;
-}
-
-@media (max-width: 480px) {
-  .amj-left-corner-frame {
-    width: 100px;
-  }
-
-  .amj-logo-no-bg {
-    width: 20rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .amj-logo-centered {
-    margin-top: -5rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .home-page-container {
-    padding: 0rem 0rem 4rem 0;
-  }
-
-  @media (max-width: 360px) {
-    .amj-name-top-left {
-      top: 0.25rem;
-      left: 0.25rem;
-    }
-
-    .amj-left-corner-frame {
-      width: 80px;
-    }
-  }
-
-  .amj-logo-centered {
-    margin-top: 4rem;
+    padding: 1rem;
   }
 
   .larger-sub-text {
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  .smaller-sub-text {
-    font-size: 1.2rem;
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .arrow {
-    width: 1rem;
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    max-width: 15rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.875rem;
+  }
+
+  .amj-logo-no-bg {
+    width: clamp(14rem, 65vw, 22rem);
+    margin-bottom: -1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .larger-sub-text {
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+    font-weight: var(--fw-regular);
+  }
+
+  .amj-logo-no-bg {
+    width: clamp(12rem, 75vw, 20rem);
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.8rem;
+    max-width: 13rem;
+  }
+
+  .larger-sub-text::after {
+    width: 4rem;
   }
 }

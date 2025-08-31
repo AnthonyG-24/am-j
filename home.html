@@ -3,84 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AM&J Movers & Installation - Professional moving, appliance installation, and logistics services across the US and worldwide."
+    />
+    <meta
+      name="keywords"
+      content="moving services, appliance installation, logistics, furniture movers, delivery services"
+    />
 
-    <title>AM&J</title>
+    <title>AM&J Movers & Installation - Professional Moving Services</title>
     <link rel="icon" type="image/jpg" href="images/logo/amj-logo.jpg" />
 
+    <!--Font Awesome-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
       rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/homePage/home.css" />
     <link rel="stylesheet" href="css/aboutPage/about.css" />
     <link rel="stylesheet" href="css/servicePage/servicePage.css" />
     <link rel="stylesheet" href="css/testimonialPage/testimonial.css" />
-    <link rel="stylesheet" href="css/demoPage/demo.css" />
     <link rel="stylesheet" href="css/imagePage/images-of-work.css" />
     <link rel="stylesheet" href="css/contactPage/contact.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
-    <!--Home Page-->
+    <!--Home Page Section-->
     <section id="home" class="home-page-section">
       <div class="home-page-container">
-        <header
-          class="main-header"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-        >
-          <div class="brand-logo">AM&J</div>
-
-          <input type="checkbox" id="nav-toggle" />
-          <label for="nav-toggle" class="menu-btn">
-            <box-icon name="menu" id="open-icon"></box-icon>
-            <box-icon name="x" id="close-icon"></box-icon>
-          </label>
-
-          <nav
-            class="nav-links"
-            data-aos="fade-down"
-            data-aos-delay="150"
-            data-aos-duration="1000"
-          >
-            <a href="#about" style="--i: 0">About</a>
-            <a href="#services" style="--i: 2">Services</a>
-            <a href="#testimonials" style="--i: 3">Testimonials</a>
-            <a href="#images" style="--i: 4">Images</a>
-            <a href="#contact" style="--i: 5">Contact</a>
-          </nav>
-        </header>
-
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-        <div
-          class="video-container"
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="1000"
-        >
+        <!-- Enhanced Video Background -->
+        <div class="video-container">
           <video
             id="video-background"
             class="home-page-video"
@@ -98,211 +57,232 @@
           </video>
         </div>
 
-        <div
-          class="amj-logo-centered"
-          data-aos="fade-up"
-          data-aos-delay="450"
-          data-aos-duration="1000"
-        >
+        <!-- Floating Decorative Elements -->
+        <div class="floating-elements"></div>
+
+        <!-- Main Content -->
+        <header class="amj-logo-centered">
           <img
             class="amj-logo-no-bg"
             src="images/Home Page Imgs/amj logo-no-bg.png"
-            alt=""
+            alt="AM&J Movers & Installation Logo"
+            loading="eager"
           />
-        </div>
 
-        <sub
-          class="subscript-text-under-logo"
-          data-aos="fade-up"
-          data-aos-delay="600"
-          data-aos-duration="1000"
-        >
-          <p class="larger-sub-text">“We move. We install. We deliver.”</p>
-        </sub>
+          <div class="subscript-text-under-logo">
+            <h1 class="larger-sub-text">We move. We install. We deliver.</h1>
+            <div class="hero-cta">
+              <a
+                href="#contact"
+                class="cta-primary"
+                aria-label="Schedule our services now"
+              >
+                Schedule Our Services Now!
+              </a>
+              <a
+                href="#services"
+                class="cta-secondary"
+                aria-label="Learn more about our services"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </header>
       </div>
     </section>
 
     <!--About Page-->
-    <section
-      id="about"
-      class="about-page-section"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
+    <section id="about" class="about-page-section">
       <div class="about-page-wrapper">
-        <div
-          class="about-left-content"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-        >
-          <h1 class="about-main-title">About AM&J Movers & Installation</h1>
+        <div class="about-content">
+          <header class="about-header">
+            <h2 class="about-main-title">About AM&J Movers & Installation</h2>
+            <p class="about-description">
+              At <strong>AM&J</strong>, we're not just movers. We help people
+              and businesses transition smoothly, whether it's a local move or a
+              cross-country job. From careful packing and furniture moving to
+              appliance installation and long-haul deliveries, our team handles
+              it all with precision and care.
+            </p>
+          </header>
 
-          <p
-            class="about-description"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="1000"
-          >
-            AM&J, we’re not just movers. We help people and businesses
-            transition smoothly, whether it’s a local move or a cross-country
-            job. From careful packing and furniture moving to appliance
-            installation and long-haul deliveries, our team handles it all with
-            precision and care.
-          </p>
-
-          <div class="about-features-grid">
-            <div
-              class="about-feature-item"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-duration="1000"
-            >
-              <div class="about-feature-content">
-                <h3>Furniture Moving & Packing</h3>
+          <div class="about-features">
+            <article class="about-feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-truck-moving" aria-hidden="true"></i>
+              </div>
+              <div class="feature-content">
+                <h3>Moving & Packing</h3>
                 <p>
-                  We take the stress out of moving. Our team packs and
-                  transports furniture with care, using proven methods that
-                  protect your belongings from start to finish. Whether it’s a
-                  local move or world wide shipping, we make sure everything
-                  arrives safely and on time.
+                  Professional residential and commercial moving services. Our
+                  team carefully packs and transports your belongings using
+                  proven methods that protect everything from start to finish.
                 </p>
               </div>
+            </article>
+
+            <div class="about-right-side">
+              <article class="about-feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-tools" aria-hidden="true"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Installation & Setup</h3>
+                  <p>
+                    Expert appliance and furniture installation services for
+                    homes and businesses. Quick, clean, and professional work
+                    with attention to every detail.
+                  </p>
+                </div>
+              </article>
+
+              <article class="about-feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-route" aria-hidden="true"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Logistics & Delivery</h3>
+                  <p>
+                    Reliable delivery routes across the US and worldwide. From
+                    local stops to coast-to-coast hauls, we help move freight
+                    with confidence and reliability.
+                  </p>
+                </div>
+              </article>
             </div>
 
-            <div
-              class="about-feature-item"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-            >
-              <div class="about-feature-content">
-                <h3>Appliance Installation & Delivery Routes</h3>
-                <p>
-                  Need a new appliance set up? We’ve got it covered. Our
-                  technicians handle both home and commercial installations with
-                  efficiency and attention to detail. We also manage dependable
-                  delivery routes, from local stops to coast-to-coast hauls,
-                  helping logistics companies move freight with confidence.
-                </p>
-              </div>
+            <div class="about-cta">
+              <a href="#services" class="cta-button">
+                Learn more about our services
+              </a>
+              <p class="cta-subtext">Professional service you can trust</p>
             </div>
           </div>
-
-          <a href="#contact" class="about-cta-button">
-            Schedule Your Move or Installation Today
-          </a>
         </div>
 
-        <div
-          class="about-right-content"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="600"
-        >
-          <div class="about-main-image">
-            <img class="truck-image" src="images/truck-02.jpg" alt="truck" />
+        <div class="about-left-side">
+          <div class="about-image">
+            <img
+              src="images/truck-02.jpg"
+              alt="AM&J professional moving truck ready for service"
+              class="about-truck-image"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <!--Service Page-->
-    <section id="services" class="service-page-section">
-      <div class="services-page-container">
-        <h2>What We Do</h2>
-        <p>
-          AM&J offers reliable moving, appliance installation, and logistics
-          services. From homes to businesses, local to long-distance, we help
-          people and companies get things where they need to go.
-        </p>
-      </div>
-      <div class="services-grid">
-        <div
-          class="service-card"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        >
-          <div class="service-image service-1">
-            <img
-              class="service-1"
-              src="images/packing-boxes.jpg"
-              alt="scheduling and packing boxes"
-            />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Moving Services</h3>
-            <ul class="service-list">
-              <li>Residential and commercial moving</li>
-              <li>Packing, unpacking, and careful handling of fragile items</li>
-            </ul>
-          </div>
-        </div>
+    <section id="services" class="services-section">
+      <div class="services-container">
+        <header class="services-header">
+          <h2 class="services-title">Our Professional Services</h2>
+          <p class="services-description">
+            <strong>AM&J</strong> provides comprehensive moving and logistics
+            solutions. From residential relocations to commercial installations,
+            we deliver reliable service that gets the job done right.
+          </p>
+        </header>
 
-        <div
-          class="service-card"
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        >
-          <div class="service-image service-2">
-            <img
-              class="service-2"
-              src="images/appliances/appliance-09.jpg"
-              alt="installing fridge"
-            />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Installations</h3>
-            <ul class="service-list">
-              <li>Furniture and appliance setup</li>
-              <li>Quick, clean, and professional work</li>
-            </ul>
-          </div>
-        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-home" aria-hidden="true"></i>
+            </div>
+            <div class="service-image">
+              <img
+                src="images/packing-boxes.jpg"
+                alt="Professional packing and moving services"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Moving & Relocation</h3>
+              <p class="service-description">
+                Complete residential and commercial moving services with
+                professional packing, loading, and careful handling of all your
+                belongings.
+              </p>
+              <ul class="service-features">
+                <li>Local and long-distance moves</li>
+                <li>Professional packing services</li>
+                <li>Fragile item protection</li>
+                <li>Loading and unloading</li>
+              </ul>
+            </div>
+          </article>
 
-        <div
-          class="service-card"
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        >
-          <div class="service-image service-3">
-            <img
-              class="service-3"
-              src="images/truck-01.jpg"
-              alt="company truck"
-            />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Logistics</h3>
-            <ul class="service-list">
-              <li>Route services across the U.S. and worldwide</li>
-              <li>Fast delivery and distribution</li>
-            </ul>
-          </div>
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-wrench" aria-hidden="true"></i>
+            </div>
+            <div class="service-image">
+              <img
+                src="images/appliances/appliance-09.jpg"
+                alt="Professional appliance installation"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Installation & Setup</h3>
+              <p class="service-description">
+                Expert installation services for appliances, furniture, and
+                equipment. Professional setup that ensures everything works
+                perfectly.
+              </p>
+              <ul class="service-features">
+                <li>Appliance installation</li>
+                <li>Furniture assembly</li>
+                <li>Equipment setup</li>
+                <li>Testing and verification</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+            </div>
+            <div class="service-image">
+              <img
+                src="images/truck-01.jpg"
+                alt="Professional delivery and logistics truck"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Logistics & Delivery</h3>
+              <p class="service-description">
+                Comprehensive logistics solutions including delivery routes,
+                freight transportation, and distribution services across the US
+                and worldwide.
+              </p>
+              <ul class="service-features">
+                <li>Route planning and management</li>
+                <li>Freight transportation</li>
+                <li>Distribution services</li>
+                <li>Tracking and updates</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="demo-video-working-container">
+          <video
+            class="demo-video-working"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+          >
+            <source src="videos/amj-movers.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
 
     <!--Testimonial Page-->
-    <section
-      class="testimonial-page-section"
-      id="testimonials"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
+    <section class="testimonial-page-section" id="testimonials">
       <div class="testimonial-page-container">
-        <div
-          class="testimonial-header"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="1000"
-        >
+        <div class="testimonial-header">
           <h2>What Our Customers Say</h2>
           <p>
             Discover why so many of our customers trust us with their business
@@ -311,12 +291,7 @@
         </div>
 
         <div class="testimonials-grid">
-          <div
-            class="testimonial-container"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="1000"
-          >
+          <div class="testimonial-container">
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -331,7 +306,9 @@
               </div>
             </div>
             <div class="testimonial-author">
-              <div class="author-avatar">JL</div>
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
               <div class="author-info">
                 <div class="author-name">Joshua L.</div>
                 <div class="author-title">Customer</div>
@@ -339,12 +316,7 @@
             </div>
           </div>
 
-          <div
-            class="testimonial-container"
-            data-aos="fade-up"
-            data-aos-delay="350"
-            data-aos-duration="1000"
-          >
+          <div class="testimonial-container">
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -359,7 +331,9 @@
               </div>
             </div>
             <div class="testimonial-author">
-              <div class="author-avatar">DK</div>
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
               <div class="author-info">
                 <div class="author-name">Daniel K.</div>
                 <div class="author-title">Customer</div>
@@ -367,12 +341,7 @@
             </div>
           </div>
 
-          <div
-            class="testimonial-container"
-            data-aos="fade-up"
-            data-aos-delay="500"
-            data-aos-duration="1000"
-          >
+          <div class="testimonial-container">
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -387,7 +356,9 @@
               </div>
             </div>
             <div class="testimonial-author">
-              <div class="author-avatar">JG</div>
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
               <div class="author-info">
                 <div class="author-name">Jeffrey G.</div>
                 <div class="author-title">Customer</div>
@@ -395,12 +366,7 @@
             </div>
           </div>
 
-          <div
-            class="testimonial-container"
-            data-aos="fade-up"
-            data-aos-delay="650"
-            data-aos-duration="1000"
-          >
+          <div class="testimonial-container">
             <div class="testimonial-content">
               <div class="rating">
                 <span class="star">★</span>
@@ -416,7 +382,9 @@
               </div>
             </div>
             <div class="testimonial-author">
-              <div class="author-avatar">AR</div>
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
               <div class="author-info">
                 <div class="author-name">Aisha R.</div>
                 <div class="author-title">Customer</div>
@@ -427,112 +395,38 @@
       </div>
     </section>
 
-    <!-- Demo Page -->
-    <section
-      id=""
-      class="demo-page-section"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      <div class="demo-page-wrapper">
-        <div class="demo-left-content">
-          <div class="demo-container">
-            <div class="demo-video-working-container">
-              <video
-                class="demo-video-working"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-              >
-                <source src="videos/amj-movers.mp4" type="video/mp4" />
-              </video>
-            </div>
-
-            <div class="demo-right-side-content">
-              <span class="demo-tagline">
-                "Packing Every Mile With A Smile"
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="demo-right-content">
-          <h1 class="demo-main-title">
-            Where Every Move Feels Like a Fresh Start
-          </h1>
-
-          <p class="demo-description">
-            At <strong>AM&J</strong>, we believe moving is more than just
-            transportation — it's about helping people move forward. From
-            growing families to expanding businesses, every transition
-            represents a fresh chapter, and we’re honored to be part of it.
-            <br /><br />
-            Our mission is simple: deliver a service rooted in trust, care, and
-            professionalism. We show up with the experience, tools, and mindset
-            to turn stress into confidence — so you can focus on what comes
-            next, not what’s in the truck.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!--Images of work-->
-    <section
-      class="images-of-work"
-      id="images"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
+    <section class="images-of-work" id="images">
       <div class="images-of-work-container">
         <img
           class="image-work-1"
           src="images/appliances/appliance-07.jpg"
-          alt="truck"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="800"
+          alt="Professional appliance installation work"
         />
         <img
           class="image-work-2"
           src="images/appliances/appliance-02.jpg"
-          alt="truck"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="800"
+          alt="Refrigerator installation and setup"
         />
         <img
           class="image-work-3"
           src="images/appliances/appliance-03.jpg"
-          alt="truck"
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="800"
+          alt="Kitchen appliance installation service"
         />
         <img
           class="image-work-4"
           src="images/appliances/appliance-04.jpg"
-          alt="truck"
-          data-aos="fade-up"
-          data-aos-delay="400"
-          data-aos-duration="800"
+          alt="Commercial appliance setup and delivery"
         />
         <img
           class="image-work-5"
           src="images/appliances/appliance-05.jpg"
-          alt="truck"
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-duration="800"
+          alt="Home appliance installation and positioning"
         />
         <img
           class="image-work-6"
           src="images/appliances/appliance-06.jpg"
-          alt="truck"
-          data-aos="fade-up"
-          data-aos-delay="600"
-          data-aos-duration="800"
+          alt="Professional appliance delivery service"
         />
       </div>
     </section>
@@ -541,31 +435,26 @@
     <section id="contact" class="contact-page-section">
       <div class="contact-page-container">
         <header class="contact-header">
-          <h1 class="contact-title">Get In Touch</h1>
+          <h2 class="contact-title">Get In Touch</h2>
           <p class="contact-subtitle">
             Ready to start a conversation? We'd love to hear from you.
           </p>
         </header>
-
-        <h1
-          style="
-            font-size: clamp(1.5rem, 2vw, 3rem);
-            font-weight: 700;
-            text-align: center;
-            margin: 1rem 0 2rem;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-        >
-          <!--  Please provide your name, email, and/or phone number -->
-        </h1>
         <div class="contact-content">
           <form
             id="contactForm"
             class="contact-form"
-            action="https://formsubmit.co/amj.mccormick@yahoo.com"
+            name="contact"
             method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             aria-label="Contact form"
           >
+            <p style="display: none">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             <div class="form-group">
               <label for="name">Your Name</label>
               <input
@@ -615,7 +504,7 @@
           </form>
 
           <aside class="contact-methods" aria-label="Other ways to contact">
-            <h4>Ways to contact:</h4>
+            <h3>Ways to Contact</h3>
 
             <div class="contact-item">
               <div class="contact-icon" aria-hidden="true">
@@ -646,7 +535,7 @@
               <div class="contact-details">
                 <span class="contact-label">Phone</span>
                 <a href="tel:+19197713747" class="contact-value"
-                  >+1 (919)-771-3747</a
+                  >+1 (919) 771-3747</a
                 >
               </div>
             </div>
@@ -676,8 +565,8 @@
             <p>amj.mccormick@yahoo.com</p>
           </div>
           <div>
-            <strong style="text-decoration: none">Phone Number:</strong>
-            <p>+1 (919)-771-3747</p>
+            <strong>Phone:</strong>
+            <p>+1 (919) 771-3747</p>
           </div>
         </div>
       </div>
@@ -689,8 +578,4 @@
     </footer>
   </body>
   <script src="js/script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </html>
