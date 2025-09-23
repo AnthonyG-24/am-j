@@ -2,18 +2,18 @@
 @import url("/css/fonts/synonym.css");
 
 :root {
-  /* 🎨 60% Neutral (backgrounds / big areas) */
+  /* 60% Neutral (backgrounds / big areas) */
   --neutral-light: #f8f9fa; /* light neutral text, borders (keeping light bg) */
   --neutral-dark: #0a0a0a; /* dark neutral for text */
 
-  /* 🎯 30% Primary (sections / buttons / headings) */
+  /* 30% Primary (sections / buttons / headings) */
   --primary: #627f61;
   --primary-2: #f0e054;
 
-  /* ✨ 10% Accent (links / CTA / hover) */
+  /*  10% Accent (links / CTA / hover) */
   --accent: #55a630; /* kelly-green */
 
-  /* ⚡ Accent Gradient (use ONLY for CTA buttons, highlights) */
+  /* Accent Gradient (use ONLY for CTA buttons, highlights) */
   --accent-gradient: linear-gradient(
     135deg,
     #007f5f,
@@ -93,7 +93,6 @@
 
 html {
   font-size: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -104,7 +103,13 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 /* HEADERS */
