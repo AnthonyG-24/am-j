@@ -49,8 +49,8 @@
 }
 
 .service-card {
-  flex: 1 1 22rem;
-  max-width: 24rem;
+  flex: 1 1 calc(50% - 2rem);
+  max-width: calc(50% - 2rem);
   background: white;
   border-radius: 0.75rem;
   overflow: hidden;

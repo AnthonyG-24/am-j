@@ -10,10 +10,10 @@
   max-width: 75rem;
   margin: 0 auto;
   padding: 0 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
-  align-items: start;
 }
 
 .about-content {
@@ -135,6 +135,22 @@
   width: 100%;
   height: auto;
   display: block;
+}
+
+@media (max-width: 1024px) {
+  .about-page-wrapper {
+    flex-direction: column;
+    padding: 0 3rem;
+  }
+
+  .about-cta {
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 820px) {
