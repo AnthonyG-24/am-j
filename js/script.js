@@ -65,3 +65,15 @@ form.addEventListener("submit", function (e) {
     alert("Please provide at least your email or phone number.");
   }
 });
+
+// ================== Notification Banner ==================
+function closeNotification() {
+  const banner = document.getElementById("notification-banner");
+  if (banner) {
+    banner.classList.add("hidden");
+    // Remove the banner from DOM after animation completes
+    setTimeout(() => {
+      banner.style.display = "none";
+    }, 500);
+  }
+}
