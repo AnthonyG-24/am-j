@@ -236,3 +236,54 @@
     padding: 0.7rem 1.25rem;
   }
 }
+
+/* Team in Action Video */
+.demo-video-working-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 50rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.demo-video-working {
+  width: 100%;
+  height: auto;
+  max-height: 30rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .demo-video-working-container {
+    max-width: 45rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .demo-video-working-container {
+    max-width: 40rem;
+    margin: 1.5rem auto;
+  }
+
+  .demo-video-working {
+    max-height: 25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .demo-video-working-container {
+    max-width: 90%;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+  }
+
+  .demo-video-working {
+    max-height: 20rem;
+    border-radius: 0.5rem;
+  }
+}

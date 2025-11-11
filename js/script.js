@@ -77,3 +77,50 @@ function closeNotification() {
     }, 500);
   }
 }
+
+// ================== Floating Call Button Visibility ==================
+window.addEventListener("scroll", function () {
+  const floatingBtn = document.querySelector(".floating-call-btn");
+  const homeSection = document.getElementById("home");
+  const footer = document.querySelector(".footer");
+
+  if (!floatingBtn || !homeSection || !footer) return;
+
+  const homeSectionBottom = homeSection.offsetTop + homeSection.offsetHeight;
+  const footerTop = footer.offsetTop;
+  const scrollPosition = window.scrollY + window.innerHeight;
+
+  // Show button when user scrolls past home section but hide when in footer
+  if (scrollPosition > homeSectionBottom && window.scrollY + window.innerHeight < footerTop + 100) {
+    floatingBtn.classList.add("visible");
+  } else {
+    floatingBtn.classList.remove("visible");
+  }
+});
+
+// ================== FAQ Toggle ==================
+function toggleFaq(button) {
+  const faqItem = button.parentElement;
+  const answer = faqItem.querySelector(".faq-answer");
+  const icon = button.querySelector("i");
+
+  // Close all other FAQs
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    if (item !== faqItem && item.classList.contains("active")) {
+      item.classList.remove("active");
+      item.querySelector(".faq-answer").style.maxHeight = null;
+      item.querySelector("i").style.transform = "rotate(0deg)";
+    }
+  });
+
+  // Toggle current FAQ
+  faqItem.classList.toggle("active");
+
+  if (faqItem.classList.contains("active")) {
+    answer.style.maxHeight = answer.scrollHeight + "px";
+    icon.style.transform = "rotate(180deg)";
+  } else {
+    answer.style.maxHeight = null;
+    icon.style.transform = "rotate(0deg)";
+  }
+}

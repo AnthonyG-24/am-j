@@ -138,7 +138,8 @@
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   padding: var(--space-4);
   border: 2px solid var(--gray-200);
   border-radius: var(--radius-lg);
@@ -153,8 +154,18 @@
   transition: all var(--transition-normal);
 }
 
+.contact-form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
@@ -373,5 +384,108 @@
   .contact-form button {
     padding: var(--space-3) var(--space-6);
     font-size: var(--text-sm);
+  }
+}
+
+/* Floating Call Now Button */
+.floating-call-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #55a630, #2b9348);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(85, 166, 48, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100px);
+}
+
+.floating-call-btn.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.floating-call-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(85, 166, 48, 0.5);
+  background: linear-gradient(135deg, #2b9348, #55a630);
+}
+
+.floating-call-btn:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.floating-call-btn i {
+  font-size: 1.25rem;
+  animation: ring 1.5s infinite;
+}
+
+.call-text {
+  font-family: var(--font-family-base);
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(85, 166, 48, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 20px rgba(85, 166, 48, 0.6), 0 0 0 10px rgba(85, 166, 48, 0.1);
+  }
+}
+
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-15deg);
+  }
+  20%, 40% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Mobile responsive for floating button */
+@media (max-width: 820px) {
+  .floating-call-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .call-text {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-call-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .floating-call-btn i {
+    font-size: 1.125rem;
+  }
+
+  .call-text {
+    font-size: 0.875rem;
   }
 }
