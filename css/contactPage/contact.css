@@ -344,7 +344,7 @@
     padding: var(--space-8) var(--space-4);
   }
   .contact-title {
-    font-size: var(--text-2xl);
+    font-size: var(--fs-h3);
   }
   .contact-header {
     margin-bottom: var(--space-8);
@@ -438,22 +438,27 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 8px 20px rgba(85, 166, 48, 0.4);
   }
   50% {
-    box-shadow: 0 8px 20px rgba(85, 166, 48, 0.6), 0 0 0 10px rgba(85, 166, 48, 0.1);
+    box-shadow: 0 8px 20px rgba(85, 166, 48, 0.6),
+      0 0 0 10px rgba(85, 166, 48, 0.1);
   }
 }
 
 @keyframes ring {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
-  10%, 30% {
+  10%,
+  30% {
     transform: rotate(-15deg);
   }
-  20%, 40% {
+  20%,
+  40% {
     transform: rotate(15deg);
   }
   50% {

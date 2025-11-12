@@ -68,6 +68,18 @@
   margin: 0 auto;
 }
 
+.inline-review-link {
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.inline-review-link:hover {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+}
+
 .testimonials-grid {
   display: flex;
   flex-wrap: wrap;

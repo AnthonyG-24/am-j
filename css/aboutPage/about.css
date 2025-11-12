@@ -13,15 +13,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .about-content {
+  flex: 1.15;
   padding-right: 1rem;
 }
 
 .about-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .about-main-title {
@@ -38,7 +39,7 @@
   font-family: var(--font-body);
   font-size: var(--fs-base);
   font-weight: var(--fw-semibolds);
-  line-height: var(--lh-base);
+  line-height: 1.7;
   color: var(--neutral-light);
 }
 
@@ -57,7 +58,7 @@
 .about-feature-card {
   display: flex;
   gap: 0.9rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   align-items: flex-start;
 }
 
@@ -95,8 +96,8 @@
 }
 
 .about-cta {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -122,6 +123,7 @@
 }
 
 .about-left-side {
+  flex: 1.05;
   padding-left: 1rem;
 }
 
@@ -129,12 +131,14 @@
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
 }
 
 .about-truck-image {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 @media (max-width: 1024px) {

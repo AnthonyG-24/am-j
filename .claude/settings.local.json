@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.bing.com)",
+      "WebFetch(domain:www.movinghelp.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
