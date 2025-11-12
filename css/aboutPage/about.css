@@ -147,6 +147,14 @@
     padding: 0 3rem;
   }
 
+  .about-content {
+    order: 2;
+  }
+
+  .about-left-side {
+    order: 1;
+  }
+
   .about-cta {
     text-align: center;
   }

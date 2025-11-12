@@ -178,6 +178,10 @@
   font-weight: var(--font-weight-normal);
 }
 
+#location::placeholder {
+  font-size: var(--text-sm);
+}
+
 .contact-form textarea {
   resize: vertical;
   min-height: 8rem;
@@ -352,6 +356,24 @@
   .contact-form {
     padding: var(--space-6);
     gap: var(--space-4);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: var(--text-sm);
+    padding: var(--space-3);
+  }
+  .contact-form input[type="date"] {
+    font-size: 0.8125rem;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: var(--text-xs);
+  }
+  #location::placeholder {
+    font-size: 0.6875rem;
+  }
+  .contact-form small {
+    font-size: 0.6875rem;
   }
   .contact-methods {
     padding: var(--space-4);

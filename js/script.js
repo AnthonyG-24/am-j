@@ -91,7 +91,10 @@ window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY + window.innerHeight;
 
   // Show button when user scrolls past home section but hide when in footer
-  if (scrollPosition > homeSectionBottom && window.scrollY + window.innerHeight < footerTop + 100) {
+  if (
+    scrollPosition > homeSectionBottom &&
+    window.scrollY + window.innerHeight < footerTop + 100
+  ) {
     floatingBtn.classList.add("visible");
   } else {
     floatingBtn.classList.remove("visible");
