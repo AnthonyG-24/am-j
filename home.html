@@ -804,7 +804,7 @@
             </div>
 
             <div class="form-group">
-              <label for="phone">Your Phone Number</label>
+              <label for="phone">Your Phone Number (Optional)</label>
               <input
                 type="tel"
                 id="phone"
@@ -815,29 +815,36 @@
             </div>
 
             <div class="form-group">
-              <label for="service">Service Type</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service...</option>
-                <option value="moving-relocation">Moving & Relocation</option>
-                <option value="appliance-installation">
-                  Appliance Installation
-                </option>
-                <option value="hot-tub-spa">Hot Tub/Spa Delivery</option>
-                <option value="aquarium-transport">
-                  Aquarium Transportation
-                </option>
-                <option value="logistics-delivery">Logistics & Delivery</option>
-                <option value="other">Other</option>
-              </select>
+              <label for="service-date">Preferred Move/Service Date (Optional)</label>
+              <input
+                type="date"
+                id="service-date"
+                name="service-date"
+                autocomplete="off"
+              />
+              <small style="display: block; margin-top: 5px; color: #666;">When would you like us to move, install, or deliver?</small>
             </div>
 
             <div class="form-group">
-              <label for="message">Your Message (Optional)</label>
+              <label for="location">Where do you need service? (Optional)</label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Enter pickup and delivery addresses (e.g., From: 123 Oak St, Raleigh - To: 456 Elm St, Durham)"
+                autocomplete="street-address"
+              />
+              <small style="display: block; margin-top: 5px; color: #666;">For moves, include both pickup and delivery addresses. For installation/delivery, include the service address.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="Tell us more about your needs..."
+                placeholder="Tell us about your moving, installation, or delivery needs..."
                 rows="5"
+                required
               ></textarea>
             </div>
 
