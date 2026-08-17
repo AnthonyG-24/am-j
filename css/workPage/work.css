@@ -1,0 +1,364 @@
+.work-section {
+  width: 100%;
+  padding: 5.5rem 3rem 6rem;
+  background-color: #f6f7f2;
+}
+
+.work-header {
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.work-description {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--hunter-green);
+}
+
+.work-description strong {
+  color: var(--evergreen);
+  font-weight: var(--fw-bold);
+}
+
+.work-gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.work-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  padding: 1.75rem 0.5rem 2.5rem;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.work-track::-webkit-scrollbar {
+  display: none;
+}
+
+.work-card {
+  flex: 0 0 auto;
+  width: 16rem;
+  scroll-snap-align: start;
+}
+
+.work-card:nth-child(3n + 2) {
+  margin-top: 2.5rem;
+}
+
+.work-card:nth-child(3n) {
+  margin-top: 1.1rem;
+}
+
+.work-card-btn {
+  all: unset;
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(19, 42, 19, 0.16);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.work-card-btn:hover,
+.work-card-btn:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(19, 42, 19, 0.24);
+}
+
+.work-card-btn img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.work-card-btn:hover img,
+.work-card-btn:focus-visible img {
+  transform: scale(1.06);
+}
+
+.work-card-zoom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: rgba(217, 164, 65, 0.94);
+  color: var(--evergreen);
+  font-size: 1rem;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.work-card-btn:hover .work-card-zoom,
+.work-card-btn:focus-visible .work-card-zoom {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.work-card-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1rem 0.85rem;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 42, 19, 0) 0%,
+    rgba(19, 42, 19, 0.85) 100%
+  );
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-align: left;
+}
+
+.work-arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--evergreen);
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.work-arrow:hover {
+  background-color: var(--fern);
+  transform: scale(1.06);
+}
+
+.work-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+  transform: none;
+}
+
+.work-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(10, 20, 10, 0.92);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+}
+
+.work-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work-lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: min(90vw, 42rem);
+  max-height: 85vh;
+  margin: 0;
+}
+
+.work-lightbox-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 1rem;
+  object-fit: contain;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.work-lightbox-content figcaption {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 1rem;
+  color: var(--lime-cream);
+  text-align: center;
+}
+
+.work-lightbox-close,
+.work-lightbox-nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: black;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.work-lightbox-close:hover,
+.work-lightbox-nav:hover {
+  background-color: red;
+}
+
+.work-lightbox-close {
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.2rem;
+}
+
+.work-lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.1rem;
+}
+
+.work-lightbox-prev {
+  left: 1.5rem;
+}
+
+.work-lightbox-next {
+  right: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .work-section {
+    padding: 4.5rem 2rem 5rem;
+  }
+}
+
+@media (max-width: 912px) {
+  .work-card {
+    width: 14.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .work-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .work-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-section {
+    padding: 4rem 1.5rem 4.5rem;
+  }
+
+  .work-arrow {
+    height: 1.3rem;
+    width: 1.3rem;
+    font-size: 0.7rem;
+  }
+
+  .work-track {
+    padding: 1.5rem 0 2rem;
+    gap: 1.25rem;
+  }
+
+  .work-card {
+    width: 13rem;
+  }
+
+  .work-lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .work-lightbox-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .work-lightbox-prev {
+    left: 0.75rem;
+  }
+
+  .work-lightbox-next {
+    right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-section {
+    padding: 3.5rem 1.25rem 4rem;
+  }
+
+  .work-description {
+    font-size: 0.92rem;
+  }
+
+  .work-card {
+    width: 10.75rem;
+  }
+
+  .work-card:nth-child(3n + 2) {
+    margin-top: 1.75rem;
+  }
+
+  .work-card:nth-child(3n) {
+    margin-top: 0.85rem;
+  }
+
+  .work-card-caption {
+    font-size: 0.8rem;
+    padding: 0.8rem 0.8rem 0.65rem;
+  }
+
+  .work-card-zoom {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .work-card {
+    width: 9.5rem;
+  }
+}

@@ -1,0 +1,228 @@
+.testimonials-section {
+  width: 100%;
+  padding: 5.5rem 3rem;
+  background-color: #f6f7f2;
+}
+
+.testimonials-header {
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.testimonials-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: var(--fw-semibold);
+  color: var(--hunter-green);
+}
+
+.testimonials-rating .stars {
+  color: var(--gold);
+  font-size: 1.05rem;
+  letter-spacing: 0.1rem;
+}
+
+.testimonials-description {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--hunter-green);
+}
+
+.testimonials-description a {
+  color: var(--fern);
+  font-weight: var(--fw-semibold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.testimonials-description a:hover {
+  color: var(--evergreen);
+}
+
+.testimonial-carousel {
+  max-width: 46rem;
+  margin: 1.5rem auto 0;
+}
+
+.testimonial-track {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  transition: height 0.25s ease;
+}
+
+.testimonial-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2.75rem 3rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(19, 42, 19, 0.06);
+  background-color: #ffffff;
+  box-shadow: 0 16px 36px rgba(19, 42, 19, 0.08);
+}
+
+.testimonial-slide.active {
+  display: flex;
+}
+
+.testimonial-slide i.fa-quote-left {
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 1.1rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial-slide blockquote {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--evergreen);
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-slide cite {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  color: var(--hunter-green);
+}
+
+.testimonial-slide cite span {
+  display: block;
+  font-weight: var(--fw-medium);
+  font-size: 0.85rem;
+  color: var(--fern);
+  margin-top: 0.2rem;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.testimonial-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid rgba(19, 42, 19, 0.14);
+  background-color: #ffffff;
+  color: var(--hunter-green);
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(19, 42, 19, 0.08);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.testimonial-arrow:hover {
+  background-color: var(--evergreen);
+  color: var(--lime-cream);
+  transform: translateY(-2px);
+}
+
+.testimonial-arrow:focus-visible {
+  outline: 2px solid var(--fern);
+  outline-offset: 2px;
+}
+
+.testimonial-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.testimonial-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(19, 42, 19, 0.18);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.testimonial-dot:hover {
+  background-color: var(--fern);
+}
+
+.testimonial-dot.active {
+  background-color: var(--gold);
+  transform: scale(1.25);
+}
+
+@media (max-width: 1024px) {
+  .testimonials-section {
+    padding: 4.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .testimonial-carousel {
+    margin-top: 1.25rem;
+  }
+
+  .testimonial-slide {
+    padding: 2.25rem 2rem;
+  }
+
+  .testimonial-slide blockquote {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .testimonials-description {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-slide {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .testimonial-slide blockquote {
+    font-size: 1rem;
+  }
+
+  .testimonial-controls {
+    gap: 1rem;
+  }
+
+  .testimonial-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}

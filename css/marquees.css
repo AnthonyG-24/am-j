@@ -1,0 +1,217 @@
+/* ============ Marquee 2: outlined tagline strip (about -> services) ============ */
+
+.marquee-outline {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--evergreen);
+  padding: 1.5rem 0;
+}
+
+.marquee-outline-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-outline-scroll 26s linear infinite reverse;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.marquee-outline-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee-outline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-black);
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--lime-cream);
+  text-stroke: 1.5px var(--lime-cream);
+}
+
+.marquee-outline-item i {
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+@keyframes marquee-outline-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============ Marquee 3: counter-rotating city ribbon (testimonials -> location) ============ */
+
+.marquee-ribbon {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2.5rem 0;
+  background-color: #f6f7f2;
+  gap: 0.5rem;
+}
+
+.marquee-ribbon-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 112%;
+  margin-left: -6%;
+  transform: rotate(-1.5deg);
+}
+
+.marquee-ribbon-row {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-ribbon-track {
+  display: flex;
+  width: max-content;
+  padding: 0.75rem 0;
+}
+
+.marquee-ribbon-row.row-a {
+  background-color: var(--gold);
+}
+
+.marquee-ribbon-row.row-b {
+  background-color: var(--evergreen);
+}
+
+.marquee-ribbon-row.row-a .marquee-ribbon-track {
+  animation: marquee-ribbon-left 22s linear infinite;
+}
+
+.marquee-ribbon-row.row-b .marquee-ribbon-track {
+  animation: marquee-ribbon-right 22s linear infinite;
+}
+
+.marquee-ribbon-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee-ribbon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-black);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.row-a .marquee-ribbon-item {
+  color: var(--evergreen);
+}
+
+.row-a .marquee-ribbon-item i {
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.row-b .marquee-ribbon-item {
+  color: var(--lime-cream);
+}
+
+.row-b .marquee-ribbon-item i {
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+
+@keyframes marquee-ribbon-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes marquee-ribbon-right {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ============ Responsive ============ */
+
+@media (max-width: 1024px) {
+  .marquee-outline-item {
+    font-size: 2.2rem;
+    padding: 0 1.5rem;
+  }
+
+  .marquee-ribbon-item {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-outline {
+    padding: 1.1rem 0;
+  }
+
+  .marquee-outline-item {
+    font-size: 1.6rem;
+    padding: 0 1.1rem;
+    -webkit-text-stroke: 1.1px var(--lime-cream);
+    text-stroke: 1.1px var(--lime-cream);
+  }
+
+  .marquee-ribbon {
+    padding: 1.75rem 0;
+  }
+
+  .marquee-ribbon-item {
+    font-size: 1.05rem;
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-outline-item {
+    font-size: 1.1rem;
+    padding: 0 0.85rem;
+    -webkit-text-stroke: 0.9px var(--lime-cream);
+    text-stroke: 0.9px var(--lime-cream);
+  }
+
+  .marquee-ribbon-item {
+    font-size: 0.85rem;
+    padding: 0 0.9rem;
+  }
+}
