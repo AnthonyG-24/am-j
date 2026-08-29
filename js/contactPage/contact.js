@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const serviceDetailGroups = {
-    // "Moving & Relocation": document.getElementById("movingSizeGroup"), // temporarily disabled pending insurance coverage
+    "Moving & Relocation": document.getElementById("movingSizeGroup"),
     "Installation & Setup": document.getElementById("installSizeGroup"),
     "Logistics & Delivery": document.getElementById("logisticsSizeGroup"),
     "Aquarium Transportation": document.getElementById("aquariumSizeGroup"),
@@ -66,18 +66,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const destinationAddressLabelText = document.getElementById("destinationAddressLabelText");
 
   const defaultHint =
-    "Include a pickup address if we're collecting the item elsewhere.";
+    "For moves, include both. For installation or delivery, just the service address.";
 
   const addressBehavior = {
-    /* "Moving & Relocation" temporarily disabled pending insurance coverage
     "Moving & Relocation": {
       destinationLabel: "Delivery Address",
       hint: "Include both your pickup and delivery address.",
     },
-    */
     "Installation & Setup": {
       destinationLabel: "Service Address",
-      hint: "Include your service address below.",
+      hint: "If we're also hauling something away, include the pickup address too.",
     },
     "Logistics & Delivery": {
       destinationLabel: "Delivery Address",
